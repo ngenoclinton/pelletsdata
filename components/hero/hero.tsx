@@ -198,7 +198,7 @@ export default function Hero() {
             initial={{ opacity: 0, y: 30 }}
             animate={{
               opacity: 1,
-              y: 0,
+            //   y: 0,
               y: [0, -8, 0],
             }}
             transition={{
@@ -237,7 +237,7 @@ export default function Hero() {
             initial={{ opacity: 0, y: 30 }}
             animate={{
               opacity: 1,
-              y: 0,
+            //   y: 0,
               y: [0, -12, 0],
             }}
             transition={{
