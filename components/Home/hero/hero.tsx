@@ -8,7 +8,7 @@ import { ChevronRight, User, Bell, Settings } from "lucide-react"
 import { Badge } from "@/components/ui/badge"
 import { Button } from "@/components/ui/button"
 
-import { useParallax } from "../hooks/useParallax"
+import { useParallax } from "../../hooks/useParallax"
 import { WorkloadCard } from "./WorkloadCard"
 import { ProgressRing } from "./ProgressRing"
 import { AnalyticsCard } from "./AnalyticsCard"
@@ -17,11 +17,7 @@ import { NetworkCard } from "./NetworkCard "
 import { motion, useScroll, useTransform } from "framer-motion"
 import { ParticleBackground } from "./ParticleBackground"
 import { RotatingCube } from "./RotatingCube"
-import { CursorFollower } from "../CursorFollower"
-
-// import { ParticleBackground } from "@/components/particle-background"
-// import { RotatingCube } from "@/components/rotating-cube"
-// import { CursorFollower } from "@/components/cursor-follower"
+import { CursorFollower } from "../../CursorFollower"
 
 export default function Hero() {
   const [percentage, setPercentage] = useState(0)
@@ -41,7 +37,9 @@ export default function Hero() {
   }, [])
 
   return (
-    <div className="relative w-full overflow-hidden" ref={ref}>
+    <div className="relative w-full overflow-hidden" 
+    // ref={ref}
+    >
       {/* Cursor follower */}
       <CursorFollower />
 
@@ -198,7 +196,7 @@ export default function Hero() {
             initial={{ opacity: 0, y: 30 }}
             animate={{
               opacity: 1,
-            //   y: 0,
+              x: 0,
               y: [0, -8, 0],
             }}
             transition={{
@@ -237,7 +235,7 @@ export default function Hero() {
             initial={{ opacity: 0, y: 30 }}
             animate={{
               opacity: 1,
-            //   y: 0,
+              x: 0,
               y: [0, -12, 0],
             }}
             transition={{

@@ -3,14 +3,17 @@ import { ArrowRight, BarChart3, BookOpen, ChevronRight, Database, Shield, Zap } 
 
 import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
-import HeroSection from "@/components/hero/hero-section"
-import Hero from "@/components/hero/hero"
+import HeroSection from "@/components/Home/hero/hero-section"
+import Hero from "@/components/Home/hero/hero"
+import CardHome from "@/components/Home/HomeBody/Card"
+import ServicesSection from "@/components/Home/servicesection/Service_Section"
 // import HeroSection from "@/components/hero/hero-section"
 
-export default function LandingPage() {
+export default function Page() {
   return (
     <div className="flex min-h-screen flex-col">
-      <header className="sticky top-0 z-50 w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
+     {/* // Navigation bar   */}
+      {/* <header className="sticky top-0 z-50 w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
         <div className="container flex h-16 items-center space-x-4 sm:justify-between sm:space-x-0">
           <div className="flex gap-6 md:gap-10">
             <Link href="/" className="flex items-center space-x-2">
@@ -45,11 +48,14 @@ export default function LandingPage() {
             <Button>Get Started</Button>
           </div>
         </div>
-      </header>
+      </header> */}
+
       <main className="flex-1">
         <Hero />
+        <CardHome/>
+        <ServicesSection />
 
-        <section id="about" className="w-full py-12 md:py-24 lg:py-32 bg-muted/40">
+        {/* <section id="about" className="w-full py-12 md:py-24 lg:py-32 bg-muted/40">
           <div className="container px-4 md:px-6">
             <div className="flex flex-col items-center justify-center space-y-4 text-center">
               <div className="space-y-2">
@@ -90,7 +96,7 @@ export default function LandingPage() {
               </p>
             </div>
           </div>
-        </section>
+        </section> */}
         <section id="services" className="w-full py-12 md:py-24 lg:py-32">
           <div className="container px-4 md:px-6">
             <div className="flex flex-col items-center justify-center space-y-4 text-center">

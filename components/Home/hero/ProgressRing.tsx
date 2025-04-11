@@ -55,7 +55,7 @@ export function ProgressRing({ percentage, size, strokeWidth = 6 }: ProgressRing
           cy={size / 2}
           r={radius}
           fill="none"
-          stroke="#8A2BE2"
+          stroke="#dc3545"
           strokeWidth={strokeWidth}
           strokeDasharray={circumference}
           initial={{ strokeDashoffset: circumference }}
@@ -70,7 +70,7 @@ export function ProgressRing({ percentage, size, strokeWidth = 6 }: ProgressRing
             cx={dotX}
             cy={dotY}
             r={strokeWidth / 1.5}
-            fill="#8A2BE2"
+            fill="#dc3545"
             initial={{ opacity: 0 }}
             animate={{
               opacity: 1,

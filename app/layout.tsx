@@ -2,6 +2,7 @@ import type React from "react"
 import "@/app/globals.css"
 
 import { Inter } from "next/font/google"
+import Navbar from "@/components/nav/navbar"
 
 // import { ThemeProvider } from "@/components/theme-provider"
 
@@ -21,6 +22,7 @@ export default function RootLayout({
     <html lang="en" suppressHydrationWarning>
       <body className={inter.className}>
         {/* <ThemeProvider attribute="class" defaultTheme="light" enableSystem disableTransitionOnChange> */}
+        <Navbar/>
           {children}
         {/* </ThemeProvider> */}
       </body>
