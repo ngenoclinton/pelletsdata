@@ -63,7 +63,7 @@ function Navbar() {
     <header className="sticky top-0 z-50 w-full ">
         <div>
       {/* Top navbar - dark blue with business hours and social icons */}
-      <motion.div
+      {/* <motion.div
         className="bg-[#092c3f] text-white py-3 flex justify-center items-center w-full"
         initial={{ opacity: 0, y: -20 }}
         animate={{ opacity: 1, y: 0 }}
@@ -91,13 +91,13 @@ function Navbar() {
             </Link>
           </div>
         </div>
-      </motion.div>
+      </motion.div> */}
 
       {/* Main navbar - glassy background with logo and navigation */}
       <motion.div
         className={cn(
           "backdrop-blur-md transition-all duration-300 flex justify-center items-center w-full",
-          scrolled ? "bg-white/80 shadow-md" : "bg-white/90",
+          scrolled ? "bg-white/80 shadow-md" : "bg-white/90 shadow-md",
         )}
         initial={{ opacity: 0, y: -10 }}
         animate={{ opacity: 1, y: 0 }}
