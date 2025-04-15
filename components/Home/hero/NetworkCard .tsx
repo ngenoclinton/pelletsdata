@@ -46,22 +46,22 @@ export function NetworkCard() {
 
   return (
     <motion.div
-      className="bg-[#092c3f] text-white rounded-xl shadow-lg p-4 w-44"
+      className="bg-[#092c3f] text-white rounded-xl shadow-lg p-3 sm:p-4 w-full max-w-[11rem] sm:max-w-none sm:w-44"
       whileHover={{ y: -5, transition: { duration: 0.2 } }}
     >
-      <div className="flex items-center justify-between mb-3">
-        <div className="text-sm">network service</div>
+      <div className="flex items-center justify-between mb-2 sm:mb-3">
+        <div className="text-xs sm:text-sm">network service</div>
         <motion.div
           className="bg-[#0a3b54] p-1 rounded-md"
           animate={{ rotate: [0, -5, 0, 5, 0] }}
           transition={{ duration: 5, repeat: Number.POSITIVE_INFINITY }}
         >
-          <PieChart className="h-4 w-4 text-white" />
+          <PieChart className="h-3 w-3 sm:h-4 sm:w-4 text-white" />
         </motion.div>
       </div>
 
       <div className="flex justify-center">
-        <svg width={size} height={size} viewBox={`0 0 ${size} ${size}`}>
+        <svg width="100%" height="100%" viewBox={`0 0 ${size} ${size}`} style={{ maxWidth: "80px", maxHeight: "80px" }}>
           {paths.map((segment, i) => (
             <motion.path
               key={i}
@@ -91,10 +91,13 @@ export function NetworkCard() {
         </svg>
       </div>
 
-      <div className="flex justify-between text-xs mt-2">
+      <div className="flex justify-between text-[10px] sm:text-xs mt-2">
         {segments.map((segment, i) => (
           <motion.div key={i} className="flex items-center" whileHover={{ scale: 1.1 }}>
-            <div className="w-2 h-2 rounded-full mr-1" style={{ backgroundColor: segment.color }}></div>
+            <div
+              className="w-1.5 h-1.5 sm:w-2 sm:h-2 rounded-full mr-0.5 sm:mr-1"
+              style={{ backgroundColor: segment.color }}
+            ></div>
             <span>{segment.value}%</span>
           </motion.div>
         ))}

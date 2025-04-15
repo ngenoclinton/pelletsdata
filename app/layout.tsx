@@ -2,7 +2,10 @@ import type React from "react"
 import "@/app/globals.css"
 
 import { Inter } from "next/font/google"
+import { Suspense } from "react"
+
 import Navbar from "@/components/nav/navbar"
+import { PageLoaderWrapper } from "@/components/loader/PageLoaderWrapper"
 
 // import { ThemeProvider } from "@/components/theme-provider"
 
@@ -21,10 +24,10 @@ export default function RootLayout({
   return (
     <html lang="en" suppressHydrationWarning>
       <body className={inter.className}>
-        {/* <ThemeProvider attribute="class" defaultTheme="light" enableSystem disableTransitionOnChange> */}
-        <Navbar/>
-          {children}
-        {/* </ThemeProvider> */}
+        
+          <Suspense fallback={<PageLoaderWrapper />}><Navbar/>
+          {children}</Suspense>
+
       </body>
     </html>
   )
