@@ -7,10 +7,9 @@ interface ProgressRingProps {
   percentage: number
   size: number
   strokeWidth?: number
-  className?: string
 }
 
-export function ProgressRing({ percentage, size, strokeWidth = 6, className = "" }: ProgressRingProps) {
+export function ProgressRing({ percentage, size, strokeWidth = 6 }: ProgressRingProps) {
   const [progress, setProgress] = useState(0)
 
   useEffect(() => {
@@ -32,14 +31,8 @@ export function ProgressRing({ percentage, size, strokeWidth = 6, className = ""
   const dotY = size / 2 + radius * Math.sin(radians)
 
   return (
-    <div className={`relative flex items-center justify-center ${className}`}>
-      <svg
-        width="100%"
-        height="100%"
-        viewBox={`0 0 ${size} ${size}`}
-        className="transform -rotate-90"
-        style={{ maxWidth: size, maxHeight: size }}
-      >
+    <div className="relative flex items-center justify-center">
+      <svg width={size} height={size} viewBox={`0 0 ${size} ${size}`} className="transform -rotate-90">
         {/* Background circle */}
         <circle cx={size / 2} cy={size / 2} r={radius} fill="none" stroke="#E5E7EB" strokeWidth={strokeWidth} />
 
@@ -112,7 +105,7 @@ export function ProgressRing({ percentage, size, strokeWidth = 6, className = ""
 
       <div className="absolute inset-0 flex items-center justify-center">
         <motion.div
-          className="text-lg sm:text-2xl font-bold text-[#092c3f]"
+          className="text-2xl font-bold text-[#092c3f]"
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ delay: 0.5 }}

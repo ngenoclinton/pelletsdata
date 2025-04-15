@@ -19,7 +19,6 @@ import { ParticleBackground } from "./ParticleBackground"
 import { RotatingCube } from "./RotatingCube"
 import { CursorFollower } from "../../CursorFollower"
 
-
 export default function Hero() {
   const [percentage, setPercentage] = useState(0)
   const { ref } = useParallax()
@@ -38,12 +37,14 @@ export default function Hero() {
   }, [])
 
   return (
-    <div className="relative w-full overflow-hidden">
+    <div className="relative w-full overflow-hidden" 
+    // ref={ref}
+    >
       {/* Cursor follower */}
       <CursorFollower />
 
       {/* Background with glow effect */}
-      <div className="absolute inset-0 bg-[#092c3f] w-full md:w-1/2 z-0">
+      <div className="absolute inset-0 bg-[#092c3f] w-1/2 z-0">
         <ParticleBackground />
         <motion.div
           className="absolute -inset-[100px] bg-[#0a3b54] rounded-full opacity-20 blur-3xl"
@@ -61,9 +62,9 @@ export default function Hero() {
 
       <div className="container relative z-10 mx-auto grid grid-cols-1 lg:grid-cols-2 min-h-screen">
         {/* Left Content */}
-        <div className="flex flex-col justify-center text-white p-6 sm:p-8 lg:p-12">
+        <div className="flex flex-col justify-center text-white p-8 lg:p-12">
           <motion.div style={{ opacity: headerOpacity, y: headerY }} className="relative">
-            <h1 className="text-2xl sm:text-3xl md:text-5xl font-bold leading-tight mb-4 sm:mb-6">
+            <h1 className="text-3xl md:text-5xl font-bold leading-tight mb-6">
               {["Data", "Refined,", "Insights", "Defined"].map((word, i) => (
                 <motion.span
                   key={i}
@@ -77,27 +78,23 @@ export default function Hero() {
               ))}
             </h1>
 
-            <p className="text-base sm:text-lg mb-6 sm:mb-8 text-[#a8c5d3] max-w-md">
+            <p className="text-lg mb-8 text-[#a8c5d3] max-w-md">
               Transform your data into actionable insights with our powerful analytics platforms.
             </p>
 
-            <div className="flex flex-wrap gap-3 sm:gap-4">
+            <div className="flex flex-wrap gap-4">
               <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }} data-hoverable="true">
-                <Button
-                  className="bg-white text-[#092c3f] hover:bg-[#f0f5f8] transition-all text-xs sm:text-sm"
-                  size="default"
-                  // sm:size="lg"
-                >
-                  Get a Free Consultation
-                  <ChevronRight className="ml-1 sm:ml-2 h-3 w-3 sm:h-4 sm:w-4" />
+                <Button className="bg-white text-[#092c3f] hover:bg-[#f0f5f8] transition-all" size="lg">
+                Get a Free Consultation
+                  <ChevronRight className="ml-2 h-4 w-4" />
                 </Button>
               </motion.div>
 
               <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }} data-hoverable="true">
                 <Button
                   variant="outline"
-                  className="hover:bg-white hover:text-[#092c3f] bg-[#092c3f] text-white transition-all text-xs sm:text-sm"
-                  size="default"
+                  className="border-white text-[#092c3f] hover:bg-[#f0f5f8] transition-all"
+                  size="lg"
                 >
                   Explore Our Services
                 </Button>
@@ -105,9 +102,9 @@ export default function Hero() {
             </div>
           </motion.div>
 
-          {/* Floating Workload Card - Hidden on mobile, visible on larger screens */}
+          {/* Floating Workload Card */}
           <motion.div
-            className="absolute left-8 top-32 lg:top-36 z-20 hidden sm:block"
+            className="absolute left-8 top-32 lg:top-36 z-20"
             initial={{ opacity: 0, x: -50 }}
             animate={{
               opacity: 1,
@@ -128,17 +125,15 @@ export default function Hero() {
             <WorkloadCard />
           </motion.div>
 
-          {/* Rotating cube decorations - Hidden on mobile */}
-          <div className="hidden sm:block">
-            <RotatingCube size={8} position="left-20 top-32" />
-            <RotatingCube size={12} position="left-40 bottom-20" />
-          </div>
+          {/* Rotating cube decorations */}
+          <RotatingCube size={8} position="left-20 top-32" />
+          <RotatingCube size={12} position="left-40 bottom-20" />
         </div>
 
         {/* Right Content */}
-        <div className="relative bg-gray-50 flex items-center justify-center p-6 sm:p-8 lg:p-0">
+        <div className="relative bg-gray-50 flex items-center justify-center p-8 lg:p-0">
           {/* Header */}
-          <div className="absolute top-2 right-2 sm:top-4 sm:right-4 lg:top-8 lg:right-8 flex items-center gap-2 sm:gap-3 z-30">
+          <div className="absolute top-4 right-4 lg:top-8 lg:right-8 flex items-center gap-3 z-30">
             <motion.div
               animate={{
                 scale: [1, 1.05, 1],
@@ -155,9 +150,9 @@ export default function Hero() {
               }}
               data-hoverable="true"
             >
-              <Badge className="bg-[#f0f5f8] text-[#092c3f] hover:bg-[#e0edf5] flex items-center gap-1 sm:gap-2 py-1 px-2 sm:py-1.5 sm:px-3 text-xs">
+              <Badge className="bg-[#f0f5f8] text-[#092c3f] hover:bg-[#e0edf5] flex items-center gap-2 py-1.5 px-3">
                 <motion.div
-                  className="w-1.5 h-1.5 sm:w-2 sm:h-2 rounded-full bg-[#092c3f]"
+                  className="w-2 h-2 rounded-full bg-[#092c3f]"
                   animate={{
                     scale: [1, 1.2, 1],
                     opacity: [1, 0.8, 1],
@@ -171,10 +166,12 @@ export default function Hero() {
                 Score 7.9
               </Badge>
             </motion.div>
-            <div className="hidden sm:flex items-center gap-1">
+            <div className="flex items-center gap-1">
               <span className="text-sm text-gray-600">Securing Your Success</span>
             </div>
           </div>
+
+         
 
           {/* Person Image */}
           <motion.div
@@ -185,17 +182,17 @@ export default function Hero() {
           >
             <Image
               src="https://img.freepik.com/free-photo/corporate-business-people-meeting-boardroom-african-manager-brainstorming-with-colleagues-discussing-strategy-sharing-problem-solving-ideas-collaborating-conference-room-company_482257-13747.jpg?ga=GA1.1.1740906415.1743623674&semt=ais_hybrid&w=740"
-              width={700}
+              width={700}   
               height={800}
               alt="Professional with data visualization"
-              className="object-cover w-full h-auto"
+              className="object-cover"
               priority
             />
           </motion.div>
 
-          {/* Floating Cards - Adjusted for responsive layout */}
+          {/* Floating Cards */}
           <motion.div
-            className="absolute top-16 sm:top-32 right-4 sm:right-8 z-20"
+            className="absolute top-32 right-8 z-20"
             initial={{ opacity: 0, y: 30 }}
             animate={{
               opacity: 1,
@@ -221,20 +218,20 @@ export default function Hero() {
             }}
             data-hoverable="true"
           >
-            <div className="bg-white rounded-xl shadow-lg p-3 sm:p-4 w-36 sm:w-44">
-              <div className="text-xs sm:text-sm text-gray-500 mb-1 sm:mb-2">recent project</div>
+            <div className="bg-white rounded-xl shadow-lg p-4 w-44">
+              <div className="text-sm text-gray-500 mb-2">recent project</div>
               <div className="flex items-center justify-between">
-                <ProgressRing percentage={percentage} size={80} className="scale-90 sm:scale-100" />
-                <div className="text-xs sm:text-sm text-[#092c3f] flex items-center">
+                <ProgressRing percentage={percentage} size={80} />
+                <div className="text-sm text-[#092c3f] flex items-center">
                   Details
-                  <ChevronRight className="h-2 w-2 sm:h-3 sm:w-3 ml-0.5 sm:ml-1" />
+                  <ChevronRight className="h-3 w-3 ml-1" />
                 </div>
               </div>
             </div>
           </motion.div>
 
           <motion.div
-            className="absolute bottom-16 sm:bottom-32 right-4 sm:right-12 z-20"
+            className="absolute bottom-32 right-12 z-20"
             initial={{ opacity: 0, y: 30 }}
             animate={{
               opacity: 1,
@@ -264,7 +261,7 @@ export default function Hero() {
           </motion.div>
 
           <motion.div
-            className="absolute bottom-24 sm:bottom-48 left-4 sm:left-8 z-20"
+            className="absolute bottom-48 left-8 z-20"
             initial={{ opacity: 0, x: -30 }}
             animate={{
               opacity: 1,
@@ -295,30 +292,23 @@ export default function Hero() {
 
           {/* Logo */}
           <motion.div
-            className="absolute top-4 sm:top-8 left-4 sm:left-8 z-30"
+            className="absolute top-8 left-8 z-30"
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ delay: 0.2, duration: 0.6 }}
             whileHover={{ scale: 1.05 }}
             data-hoverable="true"
           >
-            <Link href="/" className="flex items-center gap-1 sm:gap-2">
-              <div className="bg-[#092c3f] text-white p-0.5 sm:p-1 rounded-md">
-                <svg
-                  width="20"
-                  height="20"
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  xmlns="http://www.w3.org/2000/svg"
-                  className="sm:w-6 sm:h-6"
-                >
+            <Link href="/" className="flex items-center gap-2">
+              <div className="bg-[#092c3f] text-white p-1 rounded-md">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <path
                     d="M12 2C6.48 2 2 6.48 2 12C2 17.52 6.48 22 12 22C17.52 22 22 17.52 22 12C22 6.48 17.52 2 12 2ZM12 20C7.59 20 4 16.41 4 12C4 7.59 7.59 4 12 4C16.41 4 20 7.59 20 12C20 16.41 16.41 20 12 20ZM15 12C15 13.66 13.66 15 12 15C10.34 15 9 13.66 9 12C9 10.34 10.34 9 12 9C13.66 9 15 10.34 15 12Z"
                     fill="currentColor"
                   />
                 </svg>
               </div>
-              <span className="font-bold text-[#092c3f] text-sm sm:text-base">Pellets Analytics</span>
+              <span className="font-bold text-[#092c3f]">Pellets Analytics</span>
             </Link>
           </motion.div>
         </div>

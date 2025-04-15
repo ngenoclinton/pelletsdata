@@ -1,4 +1,4 @@
-  import Link from "next/link"
+import Link from "next/link"
 import { ArrowRight, BarChart3, BookOpen, ChevronRight, Database, Shield, Zap } from "lucide-react"
 
 import { Button } from "@/components/ui/button"
@@ -7,22 +7,97 @@ import HeroSection from "@/components/Home/hero/hero-section"
 import Hero from "@/components/Home/hero/hero"
 import CardHome from "@/components/Home/HomeBody/Card"
 import ServicesSection from "@/components/Home/servicesection/Service_Section"
-import { NavigationLoader } from "@/components/loader/NavigationLoader"
-import HowWeDoIt from "@/components/Home/HowWeDoIt"
 // import HeroSection from "@/components/hero/hero-section"
 
 export default function Page() {
   return (
     <div className="flex min-h-screen flex-col">
-        <NavigationLoader />
+     {/* // Navigation bar   */}
+      {/* <header className="sticky top-0 z-50 w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
+        <div className="container flex h-16 items-center space-x-4 sm:justify-between sm:space-x-0">
+          <div className="flex gap-6 md:gap-10">
+            <Link href="/" className="flex items-center space-x-2">
+              <BarChart3 className="h-6 w-6 text-primary" />
+              <span className="inline-block font-bold">Pellets Data Analysts</span>
+            </Link>
+            <nav className="hidden gap-6 md:flex">
+              <Link
+                href="#about"
+                className="flex items-center text-sm font-medium text-muted-foreground transition-colors hover:text-primary"
+              >
+                About
+              </Link>
+              <Link
+                href="#services"
+                className="flex items-center text-sm font-medium text-muted-foreground transition-colors hover:text-primary"
+              >
+                Services
+              </Link>
+              <Link
+                href="#contact"
+                className="flex items-center text-sm font-medium text-muted-foreground transition-colors hover:text-primary"
+              >
+                Contact
+              </Link>
+            </nav>
+          </div>
+          <div className="flex flex-1 items-center justify-end space-x-4">
+            <Button variant="outline" className="hidden sm:flex">
+              Log in
+            </Button>
+            <Button>Get Started</Button>
+          </div>
+        </div>
+      </header> */}
 
-        <main className="flex-1">
+      <main className="flex-1">
         <Hero />
         <CardHome/>
         <ServicesSection />
-        <HowWeDoIt/>
-       
-        {/* <section id="services" className="w-full py-12 md:py-24 lg:py-32">
+
+        {/* <section id="about" className="w-full py-12 md:py-24 lg:py-32 bg-muted/40">
+          <div className="container px-4 md:px-6">
+            <div className="flex flex-col items-center justify-center space-y-4 text-center">
+              <div className="space-y-2">
+                <div className="inline-block rounded-lg bg-muted px-3 py-1 text-sm">About Us</div>
+                <h2 className="text-3xl font-bold tracking-tighter sm:text-5xl">
+                  Making Data Accessible and Actionable
+                </h2>
+                <p className="max-w-[900px] text-muted-foreground md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
+                  Every business leader seeks to understand their business and understand their customer. As your
+                  business data continues to grow in volume and detail, so does the challenge of applying it to provide
+                  answers to your most important questions.
+                </p>
+              </div>
+            </div>
+            <div className="mx-auto grid max-w-5xl items-center gap-6 py-12 lg:grid-cols-2 lg:gap-12">
+              <div className="flex flex-col justify-center space-y-4">
+                <div className="space-y-2">
+                  <h3 className="text-2xl font-bold tracking-tighter sm:text-3xl">Our Mission</h3>
+                  <p className="max-w-[600px] text-muted-foreground md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
+                    Increase efficiency of businesses by providing timely intelligence to decision makers.
+                  </p>
+                </div>
+              </div>
+              <div className="flex flex-col justify-center space-y-4">
+                <div className="space-y-2">
+                  <h3 className="text-2xl font-bold tracking-tighter sm:text-3xl">Our Vision</h3>
+                  <p className="max-w-[600px] text-muted-foreground md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
+                    Converting data into a strategic business asset for our clients.
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div className="mx-auto max-w-3xl text-center">
+              <p className="text-muted-foreground md:text-xl/relaxed">
+                Even though data is complex, getting answers you need shouldn't be. We leverage the convenience of cloud
+                computing to provide dashboards that provide a 360-degree view of businesses with the most important
+                metrics in one place.
+              </p>
+            </div>
+          </div>
+        </section> */}
+        <section id="services" className="w-full py-12 md:py-24 lg:py-32">
           <div className="container px-4 md:px-6">
             <div className="flex flex-col items-center justify-center space-y-4 text-center">
               <div className="space-y-2">
@@ -140,7 +215,7 @@ export default function Page() {
               </div>
             </div>
           </div>
-        </section> */}
+        </section>
       </main>
       <footer className="flex flex-col gap-2 sm:flex-row py-6 w-full shrink-0 items-center px-4 md:px-6 border-t">
         <p className="text-xs text-muted-foreground">© 2025 Pellets Data Analysts. All rights reserved.</p>
