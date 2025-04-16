@@ -125,7 +125,7 @@ export default function about() {
 
               <div className="relative overflow-hidden rounded-lg group">
                 <Image
-                  src="/placeholder.svg?height=300&width=500"
+                  src="https://img.freepik.com/premium-photo/portrait-smiling-business-colleagues-working-office_1048944-18952035.jpg?ga=GA1.1.1546325054.1744712213&semt=ais_hybrid&w=740"
                   alt="Team members collaborating"
                   width={500}
                   height={300}
@@ -146,7 +146,7 @@ export default function about() {
             <div className="space-y-8">
               <div className="rounded-lg overflow-hidden">
                 <Image
-                  src="/placeholder.svg?height=400&width=600"
+                  src="https://img.freepik.com/premium-photo/side-view-young-woman-using-laptop-table_1048944-10213732.jpg?ga=GA1.1.1546325054.1744712213&semt=ais_hybrid&w=740"
                   alt="Team working together"
                   width={600}
                   height={400}
