@@ -48,9 +48,9 @@ export default function HowWeDoIt() {
   }
 
   return (
-    <div id="data-analytics-section" className="w-full bg-white">
+    <div id="data-analytics-section" className="w-full bg-white max-w-6xl mx-auto">
       {/* Section 1: How We Do It */}
-      <section className="relative w-full py-20 md:py-20 overflow-visible">
+      <section className="relative w-full pb-10 md:pb-16 overflow-visible">
         <div className="container mx-auto px-4">
           {/* Dotted connection lines */}
           <div className="absolute top-1/4 left-1/2 transform -translate-x-1/2 w-[80%] h-[60%] pointer-events-none">
@@ -155,11 +155,11 @@ export default function HowWeDoIt() {
                 variants={fadeIn}
                 transition={{ duration: 0.5 }}
               >
-                <h2 className="text-4xl md:text-5xl font-bold mb-6 text-[#092c3f]">
+                <h2 className="mb-6 text-2xl md:text-3xl font-bold mt-2 text-[#092c3f]">
                   Professional Approach and Quality Services
                 </h2>
 
-                <p className="text-gray-600 mb-8 text-lg leading-relaxed">
+                <p className="text-gray-600 mb-8 text-base leading-relaxed">
                   Unlike standard hard-wired application reports, business intelligence reports are meant to address
                   changing and varying business requirements at different levels of an organization.
                 </p>
@@ -296,11 +296,11 @@ export default function HowWeDoIt() {
                 transition={{ duration: 0.5 }}
               >
 
-                <h2 className="text-4xl md:text-5xl font-bold mb-6 text-[#092c3f]">
+                <h2 className="mb-6 text-2xl md:text-3xl font-bold mt-2 text-[#092c3f]">
                   Providing Quality Data Services & Consulting
                 </h2>
 
-                <p className="text-gray-600 mb-8 text-lg leading-relaxed">
+                <p className="text-gray-600 mb-8 text-base leading-relaxed">
                   Pellets Data Analysts is a data consultancy firm focused on helping businesses harness the full value
                   of their data. We combine technology, domain knowledge, and a customer-first approach to deliver
                   practical, tailored analytics solutions.
@@ -357,7 +357,7 @@ export default function HowWeDoIt() {
                   </div>
                 </div>
 
-                <div className="mb-8">
+                <div className="mb-8 text-base">
                   <div className="mb-3">
                     <p className="text-gray-600">
                     Our Mission To increase efficiency in businesses by providing timely, reliable intelligence to

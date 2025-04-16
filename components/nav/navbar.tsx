@@ -129,7 +129,7 @@ function Navbar() {
           <nav className="hidden md:flex items-center space-x-8">
             {[
               { name: "Home", href: "/" },
-              { name: "About", href: "/about" },
+              { name: "About", href: "/about_pellets" },
               { name: "Training", href: "/training" },
               { name: "Consultancy & More", href: "/consultancy" },
               { name: "Contact", href: "/contact" },

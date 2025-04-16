@@ -38,13 +38,13 @@ export default function CardHome() {
       icon: <LineChart className="h-5 w-5 text-gray-700" />,
       title: "Data Quality Enhancement",
       description:
-        "ClearBook offers data cleansing and quality assurance services that help organizations maintain accurate, consistent, and error-free data.",
+        "Pellets Analysts offers data cleansing and quality assurance services that help organizations maintain accurate, consistent, and error-free data.",
     },
     {
       icon: <BarChart3 className="h-5 w-5 text-gray-700" />,
       title: "Customized Solutions",
       description:
-        "ClearBook tailors its data management solutions to meet the specific needs and objectives of each client.",
+        "Pellets Analytics tailors its data management solutions to meet the specific needs and objectives of each client.",
     },
   ]
 
@@ -156,7 +156,7 @@ export default function CardHome() {
                     {card.title}
                   </h3>
                 </div>
-                <p className={`text-sm ${activeCard === index ? "text-gray-600" : "text-gray-200"}`}>
+                <p className={`text-base ${activeCard === index ? "text-gray-600" : "text-gray-200"}`}>
                   {card.description}
                 </p>
               </motion.div>

@@ -9,6 +9,9 @@ import CardHome from "@/components/Home/HomeBody/Card"
 import ServicesSection from "@/components/Home/servicesection/Service_Section"
 // import { NavigationLoader } from "@/components/loader/NavigationLoader"
 import HowWeDoIt from "@/components/Home/HowWeDoIt"
+import IndustriesSection from "@/components/Home/Industries"
+import TeamSection from "@/components/Home/TeamSection"
+import QuickContact from "@/components/Home/QuickContact"
 // import HeroSection from "@/components/hero/hero-section"
 
 export default function Page() {
@@ -21,7 +24,9 @@ export default function Page() {
         <CardHome/>
         <ServicesSection />
         <HowWeDoIt/>
-       
+       <IndustriesSection/>
+       <TeamSection/>
+       <QuickContact/>
         {/* <section id="services" className="w-full py-12 md:py-24 lg:py-32">
           <div className="container px-4 md:px-6">
             <div className="flex flex-col items-center justify-center space-y-4 text-center">
