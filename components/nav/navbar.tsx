@@ -214,7 +214,7 @@ function Navbar() {
                 <div className="px-2 pt-2 pb-3 space-y-1">
                   {[
                     { name: "Home", href: "/" },
-                    { name: "About", href: "/about" },
+                    { name: "About", href: "/about_pellets" },
                     { name: "Training", href: "/training" },
                     { name: "Consultancy & More", href: "/consultancy" },
                     { name: "Contact", href: "/contact" },

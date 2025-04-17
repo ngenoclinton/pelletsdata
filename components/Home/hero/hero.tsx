@@ -40,7 +40,7 @@ export default function Hero() {
   return (
     <div className="relative w-full overflow-hidden">
       {/* Cursor follower */}
-      <CursorFollower />
+      {/* <CursorFollower /> */}
 
       {/* Background with glow effect */}
       <div className="absolute inset-0 bg-[#092c3f] w-full md:w-1/2 z-0">

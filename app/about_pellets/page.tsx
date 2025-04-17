@@ -1,13 +1,16 @@
-
-import Image from "next/image"
-import Link from "next/link"
-import { ArrowRight, CheckCircle, Play } from "lucide-react"
+import Image from "next/image";
+import Link from "next/link";
+import { ArrowRight, CheckCircle, Play } from "lucide-react";
+import TeamMembers from "@/components/about/Team";
+import AboutCTA from "@/components/about/CTAWithContent";
+import AboutExperience from "@/components/about/AboutExperience";
 
 export default function about() {
+  
   return (
     <main className="min-h-screen">
       {/* Hero Section */}
-      <section className="relative h-[400px] md:h-[500px] overflow-hidden">
+      <section className="relative h-[450px] md:h-[500px] overflow-hidden">
         <div className="absolute inset-0 bg-[#092c3f]/80 z-10"></div>
         <Image
           src="https://img.freepik.com/premium-photo/startup-manager-showing-analytics-plan-digital-tablet-presenting-business-statistics-before-working-profit-development-team-people-examining-annual-data-reports-research-office_482257-64753.jpg?ga=GA1.1.1546325054.1744712213&semt=ais_hybrid&w=740"
@@ -41,8 +44,8 @@ export default function about() {
               </div>
 
               <p className="text-white/80 max-w-md text-sm">
-                Pellets Data Analysts is a data consultancy firm focused on helping businesses harness the full value of
-                their data.
+                Pellets Data Analysts is a data consultancy firm focused on
+                helping businesses harness the full value of their data.
               </p>
 
               <div className="w-16 h-16 rounded-full bg-[#eb566c] flex items-center justify-center cursor-pointer hover:bg-[#eb566c]/90 transition-colors">
@@ -54,7 +57,7 @@ export default function about() {
       </section>
 
       {/* Our Story Section */}
-      <section id="our-story" className="py-20 bg-white">
+      <section id="our-story" className="py-16 md:py-20 bg-white mx-auto max-w-5xl">
         <div className="container mx-auto px-4">
           <div className="flex flex-col md:flex-row gap-12 items-center">
             <div className="md:w-1/2">
@@ -63,37 +66,45 @@ export default function about() {
                 alt="Our team working"
                 width={600}
                 height={400}
-                className="rounded-lg shadow-lg"
+                className="shadow-lg"
               />
             </div>
             <div className="md:w-1/2">
-              <div className="inline-block px-3 py-1 mb-4 rounded-full bg-[#092c3f]/10 text-[#092c3f] text-sm font-medium">
+              <div className="inline-block px-3 py-1 mb-4 rounded-full bg-[#092c3f]/10 text-[#092c3f] text-xs font-medium">
                 🌍 WHO WE ARE
               </div>
-              <h2 className="text-3xl md:text-4xl font-bold text-[#092c3f] mb-6">Our Story</h2>
-              <p className="text-lg text-gray-700 mb-6">
-                Pellets Data Analysts began with a mission: to make data accessible, powerful, and profitable for
-                African businesses. We believe clarity is everything—and we design with that in mind.
+              <h2 className="text-2xl md:text-3xl font-bold text-[#092c3f] mb-6">
+                Our Story
+              </h2>
+              <p className="text-base text-gray-700 mb-6">
+                Pellets Data Analysts began with a mission: to make data
+                accessible, powerful, and profitable for African businesses. We
+                believe clarity is everything—and we design with that in mind.
               </p>
               <div className="flex items-center gap-4 mt-8">
                 <div className="h-1 w-12 bg-[#eb566c]"></div>
-                <span className="text-[#092c3f] font-medium">Founded in 2018</span>
+                <span className="text-[#092c3f] font-medium">
+                  Founded in 2018
+                </span>
               </div>
             </div>
           </div>
         </div>
       </section>
 
-{/* Team Section */}
-      <section className="py-20 bg-white">
+      {/* Team Section */}
+      <section className="py-10 md:py-16 bg-white mx-auto max-w-6xl">
         <div className="container mx-auto px-4">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
             <div className="space-y-8">
               <div>
-                <span className="text-[#092c3f] text-sm font-medium uppercase border-b-2 border-[#eb566c] pb-1">
-                  ABOUT COMPANY
-                </span>
-                <h2 className="text-3xl md:text-4xl font-bold text-[#092c3f] mt-4">
+                <div className="flex items-center gap-2">
+                  <div className="h-0.5 w-12 bg-[#eb566c]"></div>
+                  <span className="text-[#092c3f] text-sm font-medium uppercase pb-1">
+                    ABOUT COMPANY
+                  </span>
+                </div>
+                <h2 className="text-2xl md:text-3xl font-bold text-[#092c3f] mt-4">
                   We Are The Best
                   <br />
                   Solution For Your Data
@@ -113,23 +124,25 @@ export default function about() {
                   />
                 </div>
                 <div>
-                  <h3 className="text-lg font-semibold text-[#092c3f]">
-                  Edwin Lumiti Khamasi, <span className="font-normal">Founder</span>
+                  <h3 className="text-base font-semibold text-[#092c3f]">
+                    Edwin Lumiti Khamasi,{" "}
+                    <span className="font-normal">Founder</span>
                   </h3>
-                  <p className="text-gray-600 text-sm mt-2">
-                    With over 15 years of experience in data science and analytics, Sarah founded Pellets to bridge the
-                    gap between complex data and actionable business insights.
+                  <p className="text-gray-600 text-base mt-2">
+                    With over 15 years of experience in data science and
+                    analytics, Sarah founded Pellets to bridge the gap between
+                    complex data and actionable business insights.
                   </p>
                 </div>
               </div>
 
-              <div className="relative overflow-hidden rounded-lg group">
+              <div className="relative overflow-hidden group h-1/4">
                 <Image
                   src="https://img.freepik.com/premium-photo/portrait-smiling-business-colleagues-working-office_1048944-18952035.jpg?ga=GA1.1.1546325054.1744712213&semt=ais_hybrid&w=740"
                   alt="Team members collaborating"
                   width={500}
-                  height={300}
-                  className="w-full object-cover transition-transform duration-500 group-hover:scale-105"
+                  height={64}
+                  className="w-full object-contain transition-transform duration-500 group-hover:scale-105"
                 />
                 <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-[#092c3f] to-transparent p-4">
                   <Link
@@ -144,7 +157,7 @@ export default function about() {
             </div>
 
             <div className="space-y-8">
-              <div className="rounded-lg overflow-hidden">
+              <div className="overflow-hidden">
                 <Image
                   src="https://img.freepik.com/premium-photo/side-view-young-woman-using-laptop-table_1048944-10213732.jpg?ga=GA1.1.1546325054.1744712213&semt=ais_hybrid&w=740"
                   alt="Team working together"
@@ -154,29 +167,38 @@ export default function about() {
                 />
               </div>
 
-              <div className="space-y-4">
-                <p className="text-gray-700">
-                  Our team of data specialists combines technical expertise with business acumen to deliver insights
-                  that drive real results. We work closely with each client to understand their unique challenges and
-                  opportunities.
+              <div className="space-y-4 text-base">
+                <p className="text-gray-700 text-base">
+                  Our team of data specialists combines technical expertise with
+                  business acumen to deliver insights that drive real results.
+                  We work closely with each client to understand their unique
+                  challenges and opportunities.
                 </p>
 
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mt-6">
                   <div className="flex items-center gap-2">
                     <CheckCircle className="h-5 w-5 text-[#eb566c]" />
-                    <span className="text-[#092c3f] font-medium">Best Analytics Service</span>
+                    <span className="text-[#092c3f] font-medium">
+                      Best Analytics Service
+                    </span>
                   </div>
                   <div className="flex items-center gap-2">
                     <CheckCircle className="h-5 w-5 text-[#eb566c]" />
-                    <span className="text-[#092c3f] font-medium">Highly Dedicated Team</span>
+                    <span className="text-[#092c3f] font-medium">
+                      Highly Dedicated Team
+                    </span>
                   </div>
                   <div className="flex items-center gap-2">
                     <CheckCircle className="h-5 w-5 text-[#eb566c]" />
-                    <span className="text-[#092c3f] font-medium">Business Strategy & Growth</span>
+                    <span className="text-[#092c3f] font-medium">
+                      Business Strategy & Growth
+                    </span>
                   </div>
                   <div className="flex items-center gap-2">
                     <CheckCircle className="h-5 w-5 text-[#eb566c]" />
-                    <span className="text-[#092c3f] font-medium">98.7% Customer Satisfaction</span>
+                    <span className="text-[#092c3f] font-medium">
+                      98.7% Customer Satisfaction
+                    </span>
                   </div>
                 </div>
               </div>
@@ -184,36 +206,34 @@ export default function about() {
           </div>
         </div>
       </section>
-
+      
       {/* Mission and Vision Section */}
-      <section className="py-20 bg-[#f8f9fa]">
+      <section className="pt-16 md:pt-0 pb-16 md:-mt-16 lg:-mt-40 max-w-4xl mx-auto">
         <div className="container mx-auto px-4">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-[#092c3f] mb-4">Mission and Vision</h2>
-            <p className="text-lg text-gray-700 max-w-2xl mx-auto">
-              Our guiding principles that drive everything we do
-            </p>
-          </div>
-
           <div className="grid md:grid-cols-2 gap-8">
-            <div className="bg-white p-8 rounded-xl shadow-md border-t-4 border-[#eb566c] hover:shadow-lg transition-shadow">
-              <h3 className="text-2xl font-bold text-[#092c3f] mb-4">Mission</h3>
+            <div className="bg-white p-4 rounded-xl shadow-md border-t-4 border-[#eb566c] hover:shadow-lg transition-shadow">
+              <h3 className="text-2xl font-bold text-[#092c3f] mb-4">
+                Mission
+              </h3>
               <p className="text-gray-700">
-                To increase efficiency in businesses by providing timely, reliable intelligence to decision-makers.
+                To increase efficiency in businesses by providing timely,
+                reliable intelligence to decision-makers.
               </p>
               <div className="mt-6 flex justify-end">
                 <div className="h-12 w-12 rounded-full bg-[#e8ff8d] flex items-center justify-center">
-                  <span className="text-[#092c3f] font-bold">01</span>
+                  {/* <span className="text-[#092c3f] font-bold">01</span> */}
                 </div>
               </div>
             </div>
 
             <div className="bg-white p-8 rounded-xl shadow-md border-t-4 border-[#e8ff8d] hover:shadow-lg transition-shadow">
               <h3 className="text-2xl font-bold text-[#092c3f] mb-4">Vision</h3>
-              <p className="text-gray-700">To make data a strategic asset for every client we serve.</p>
+              <p className="text-gray-700">
+                To make data a strategic asset for every client we serve.
+              </p>
               <div className="mt-6 flex justify-end">
                 <div className="h-12 w-12 rounded-full bg-[#eb566c] flex items-center justify-center">
-                  <span className="text-white font-bold">02</span>
+                  {/* <span className="text-white font-bold">02</span> */}
                 </div>
               </div>
             </div>
@@ -221,11 +241,19 @@ export default function about() {
         </div>
       </section>
 
+      <TeamMembers/>
+      
+      <AboutExperience/>
+
+      <AboutCTA/>
       {/* Why Pellets Section */}
-      <section className="py-20 bg-[#092c3f]">
+
+      {/* <section className="py-20 bg-[#092c3f]">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">Why Pellets?</h2>
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+              Why Pellets?
+            </h2>
             <p className="text-lg text-white/80 max-w-2xl mx-auto">
               What makes us the right choice for your data analytics needs
             </p>
@@ -236,16 +264,24 @@ export default function about() {
               <div className="mb-6 text-[#e8ff8d]">
                 <CheckCircle size={32} />
               </div>
-              <h3 className="text-xl font-bold text-white mb-3">Industry Experts</h3>
-              <p className="text-white/80">Industry experts with a track record in analytics delivery</p>
+              <h3 className="text-xl font-bold text-white mb-3">
+                Industry Experts
+              </h3>
+              <p className="text-white/80">
+                Industry experts with a track record in analytics delivery
+              </p>
             </div>
 
             <div className="bg-[#092c3f]/40 backdrop-blur-sm p-8 rounded-xl border border-white/10 hover:bg-[#092c3f]/60 transition-colors">
               <div className="mb-6 text-[#e8ff8d]">
                 <CheckCircle size={32} />
               </div>
-              <h3 className="text-xl font-bold text-white mb-3">Human-Centric</h3>
-              <p className="text-white/80">Human-centric reporting that adapts to your needs</p>
+              <h3 className="text-xl font-bold text-white mb-3">
+                Human-Centric
+              </h3>
+              <p className="text-white/80">
+                Human-centric reporting that adapts to your needs
+              </p>
             </div>
 
             <div className="bg-[#092c3f]/40 backdrop-blur-sm p-8 rounded-xl border border-white/10 hover:bg-[#092c3f]/60 transition-colors">
@@ -253,32 +289,14 @@ export default function about() {
                 <CheckCircle size={32} />
               </div>
               <h3 className="text-xl font-bold text-white mb-3">Commitment</h3>
-              <p className="text-white/80">Commitment to clarity, security, and business impact</p>
+              <p className="text-white/80">
+                Commitment to clarity, security, and business impact
+              </p>
             </div>
           </div>
         </div>
-      </section>
+      </section>  */}
 
-      {/* CTA Section */}
-      <section className="py-20 bg-white">
-        <div className="container mx-auto px-4">
-          <div className="max-w-3xl mx-auto text-center">
-            <h2 className="text-3xl md:text-4xl font-bold text-[#092c3f] mb-6">
-              Ready to transform your data into actionable insights?
-            </h2>
-            <p className="text-lg text-gray-700 mb-8">
-              Let's work together to unlock the full potential of your business data.
-            </p>
-            <Link
-              href="/contact"
-              className="inline-flex items-center gap-2 px-8 py-4 rounded-full bg-[#eb566c] text-white font-medium hover:bg-[#eb566c]/90 transition-colors"
-            >
-              <span>Contact Us</span>
-              <ArrowRight size={18} />
-            </Link>
-          </div>
-        </div>
-      </section>
     </main>
-  )
+  );
 }
