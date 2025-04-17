@@ -254,7 +254,14 @@ export default function QuickContact() {
 
             <div className="mt-12">
               <p className="text-white/70 mb-2">Call us at this number</p>
-              <p className="text-3xl font-bold text-white mb-6">1800 667 3322</p>
+              <div className="">
+              <p className="text-lg font-bold text-white mb-1">+254 724 476914</p>
+              <p className="text-lg font-bold text-white mb-1">+254 737 357906</p>
+
+              </div>
+              <p className="text-sm semibold text-white mb-1">edwin.lumiti@pelletsdata.co.ke
+
+</p>
             </div>
           </div>
         </div>

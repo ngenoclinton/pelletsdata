@@ -1,32 +1,46 @@
-import Link from "next/link"
-import { ArrowRight, BarChart3, BookOpen, ChevronRight, Database, Shield, Zap } from "lucide-react"
+import Link from "next/link";
+import {
+  ArrowRight,
+  BarChart3,
+  BookOpen,
+  ChevronRight,
+  Database,
+  Shield,
+  Zap,
+} from "lucide-react";
 
-import { Button } from "@/components/ui/button"
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
-import HeroSection from "@/components/Home/hero/hero-section"
-import Hero from "@/components/Home/hero/hero"
-import CardHome from "@/components/Home/HomeBody/Card"
-import ServicesSection from "@/components/Home/servicesection/Service_Section"
+import { Button } from "@/components/ui/button";
+import {
+  Card,
+  CardContent,
+  CardDescription,
+  CardHeader,
+  CardTitle,
+} from "@/components/ui/card";
+import HeroSection from "@/components/Home/hero/hero-section";
+import Hero from "@/components/Home/hero/hero";
+import CardHome from "@/components/Home/HomeBody/Card";
+import ServicesSection from "@/components/Home/servicesection/Service_Section";
 // import { NavigationLoader } from "@/components/loader/NavigationLoader"
-import HowWeDoIt from "@/components/Home/HowWeDoIt"
-import IndustriesSection from "@/components/Home/Industries"
-import TeamSection from "@/components/Home/TeamSection"
-import QuickContact from "@/components/Home/QuickContact"
+import HowWeDoIt from "@/components/Home/HowWeDoIt";
+import IndustriesSection from "@/components/Home/Industries";
+import TeamSection from "@/components/Home/TeamSection";
+import QuickContact from "@/components/Home/QuickContact";
 // import HeroSection from "@/components/hero/hero-section"
 
 export default function Page() {
   return (
     <div className="flex min-h-screen flex-col">
-        {/* <NavigationLoader /> */}
+      {/* <NavigationLoader /> */}
 
-        <main className="flex-1">
+      <main className="flex-1">
         <Hero />
-        <CardHome/>
-        <ServicesSection />
-        <HowWeDoIt/>
-       <IndustriesSection/>
-       <TeamSection/>
-       <QuickContact/>
+        <CardHome />
+        {/* <ServicesSection /> */}
+        <HowWeDoIt />
+        <IndustriesSection />
+        <TeamSection />
+        <QuickContact />
         {/* <section id="services" className="w-full py-12 md:py-24 lg:py-32">
           <div className="container px-4 md:px-6">
             <div className="flex flex-col items-center justify-center space-y-4 text-center">
@@ -115,7 +129,9 @@ export default function Page() {
         </section> */}
       </main>
       <footer className="flex flex-col gap-2 sm:flex-row py-6 w-full shrink-0 items-center px-4 md:px-6 border-t">
-        <p className="text-xs text-muted-foreground">© 2025 Pellets Data Analysts. All rights reserved.</p>
+        <p className="text-xs text-muted-foreground">
+          © 2025 Pellets Data Analysts. All rights reserved.
+        </p>
         <nav className="sm:ml-auto flex gap-4 sm:gap-6">
           <Link href="#" className="text-xs hover:underline underline-offset-4">
             Terms of Service
@@ -126,5 +142,5 @@ export default function Page() {
         </nav>
       </footer>
     </div>
-  )
+  );
 }

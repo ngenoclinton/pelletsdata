@@ -40,7 +40,7 @@ export default function Hero() {
   return (
     <div className="relative w-full overflow-hidden">
       {/* Cursor follower */}
-      <CursorFollower />
+      {/* <CursorFollower /> */}
 
       {/* Background with glow effect */}
       <div className="absolute inset-0 bg-[#092c3f] w-full md:w-1/2 z-0">
@@ -78,8 +78,7 @@ export default function Hero() {
             </h1>
 
             <p className="text-base sm:text-lg mb-6 sm:mb-8 text-[#a8c5d3] max-w-md">
-              Transform your data into actionable insights with our powerful analytics platforms.
-            </p>
+            Transform your data into actionable insights with the power of your team and analytics expertise.            </p>
 
             <div className="flex flex-wrap gap-3 sm:gap-4">
               <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }} data-hoverable="true">
