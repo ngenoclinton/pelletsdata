@@ -126,7 +126,7 @@ export default function TrainingPage() {
       </section>
 
       {/* CTA Section */}
-      <section id="book-session" className="py-16 md:py-24 bg-[#e8ff8d]">
+      <section id="book-session" className="py-16 md:py-24 bg-[#092c3f]/2">
         <div className="container mx-auto px-4 md:px-6">
           <div className="text-center">
             <h2 className="text-3xl md:text-4xl font-bold text-[#092c3f] mb-6">Ready to Enhance Your Data Skills?</h2>
@@ -136,7 +136,7 @@ export default function TrainingPage() {
             </p>
             <Link
               href="/contact"
-              className="inline-block px-8 py-4 bg-[#eb566c] text-white font-bold rounded-md hover:bg-[#eb566c]/90 transition-colors"
+              className="inline-block px-8 py-4 bg-[#092c3f] text-white font-bold rounded-md hover:bg-[#092c3f]/90 transition-colors"
             >
               Book a Training Session
             </Link>

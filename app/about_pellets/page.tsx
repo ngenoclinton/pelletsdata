@@ -117,7 +117,7 @@ export default function about() {
                 <div className="flex-shrink-0">
                   <Image
                     src="/edwin.png"
-                    alt="Sarah Johnson"
+                    alt="Edwin Lumiti Khamasi"
                     width={80}
                     height={80}
                     className="rounded-full"
@@ -130,7 +130,7 @@ export default function about() {
                   </h3>
                   <p className="text-gray-600 text-base mt-2">
                     With over 15 years of experience in data science and
-                    analytics, Sarah founded Pellets to bridge the gap between
+                    analytics, Edwin founded Pellets to bridge the gap between
                     complex data and actionable business insights.
                   </p>
                 </div>

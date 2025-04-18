@@ -102,7 +102,7 @@ export default function AboutPage() {
           </div>
         </div>
       </section>
-
+ 
       {/* Team Section */}
       <section className="py-20 bg-white">
         <div className="container mx-auto px-4">
@@ -125,7 +125,7 @@ export default function AboutPage() {
                 <div className="flex-shrink-0">
                   <Image
                     src="/placeholder.svg?height=100&width=100"
-                    alt="Sarah Johnson"
+                    alt="Edwin Lumiti Khamasi"
                     width={80}
                     height={80}
                     className="rounded-full"
@@ -133,10 +133,10 @@ export default function AboutPage() {
                 </div>
                 <div>
                   <h3 className="text-lg font-semibold text-[#092c3f]">
-                    Sarah Johnson, <span className="font-normal">Founder</span>
+                    Edwin Lumiti Khamasi, <span className="font-normal">Founder</span>
                   </h3>
                   <p className="text-gray-600 text-sm mt-2">
-                    With over 15 years of experience in data science and analytics, Sarah founded Pellets to bridge the
+                    With over 15 years of experience in data science and analytics, Edwin founded Pellets to bridge the
                     gap between complex data and actionable business insights.
                   </p>
                 </div>
