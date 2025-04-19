@@ -4,7 +4,7 @@ import { useEffect, useRef, useState } from "react"
 import Link from "next/link"
 import Image from "next/image"
 
-export default function AboutCTA() {
+export default function CTASection() {
   const [currentSlide, setCurrentSlide] = useState(0)
   const sliderRef = useRef<HTMLDivElement>(null)
 

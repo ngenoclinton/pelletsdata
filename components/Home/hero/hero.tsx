@@ -17,12 +17,10 @@ import { NetworkCard } from "./NetworkCard "
 import { motion, useScroll, useTransform } from "framer-motion"
 import { ParticleBackground } from "./ParticleBackground"
 import { RotatingCube } from "./RotatingCube"
-import { CursorFollower } from "../../CursorFollower"
 
 
 export default function Hero() {
   const [percentage, setPercentage] = useState(0)
-  const { ref } = useParallax()
   const { scrollYProgress } = useScroll()
 
   // Scroll-based animations

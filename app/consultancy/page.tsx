@@ -7,6 +7,7 @@ import ConsultationSuccessStory from "@/components/consultations/ConsultationSuc
 import type { Metadata } from "next"
 import ConsultancyHero from "@/components/consultations/ConsultancyHero"
 import WhyChooseUs from "@/components/consultations/WhyChooseUs"
+import WhyPellets from "@/components/about/WhyPellets"
 
 export const metadata: Metadata = {
   title: "Data Analytics Consultancy | Powering Smarter Decisions",
@@ -24,7 +25,6 @@ export default function Page() {
       <ConsultationIndustries />
       <ConsultationSuccessStory />
       <WhyChooseUs />
-      <ConsultationCta />
     </main>
   )
 }

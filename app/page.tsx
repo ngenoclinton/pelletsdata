@@ -17,47 +17,30 @@ import {
   CardHeader,
   CardTitle,
 } from "@/components/ui/card";
-import HeroSection from "@/components/Home/hero/hero-section";
-import Hero from "@/components/Home/hero/hero";
-import CardHome from "@/components/Home/HomeBody/Card";
-import ServicesSection from "@/components/Home/servicesection/Service_Section";
-// import { NavigationLoader } from "@/components/loader/NavigationLoader"
+
 import HowWeDoIt from "@/components/Home/HowWeDoIt";
 import IndustriesSection from "@/components/Home/Industries";
 import TeamSection from "@/components/Home/TeamSection";
 import QuickContact from "@/components/Home/QuickContact";
 import WhatWeProvide from "@/components/Home/servicesection/WhatWeProvide";
-// import HeroSection from "@/components/hero/hero-section"
-
+import Hero from "@/components/Home/hero/hero";
+import SolutionHighlights from "@/components/Home/SolutionHighlights";
+import Trainings from "@/components/Home/OurTrainings";
+import CTASection from "@/components/CTAWithContent";
 export default function Page() {
   return (
     <div className="flex min-h-screen flex-col">
-      {/* <NavigationLoader /> */}
-
       <main className="flex-1">
         <Hero />
-        <CardHome />
-        {/* <ServicesSection /> */}
-        <WhatWeProvide/>
+        <SolutionHighlights/>
+        <WhatWeProvide/>  
         <HowWeDoIt />
+        <Trainings/>
         <IndustriesSection />
         <TeamSection />
-        <QuickContact />
-        
+      {/* Cta Section */}
+      <CTASection/>
       </main>
-      <footer className="flex flex-col gap-2 sm:flex-row py-6 w-full shrink-0 items-center px-4 md:px-6 border-t">
-        <p className="text-xs text-muted-foreground">
-          © 2025 Pellets Data Analysts. All rights reserved.
-        </p>
-        <nav className="sm:ml-auto flex gap-4 sm:gap-6">
-          <Link href="#" className="text-xs hover:underline underline-offset-4">
-            Terms of Service
-          </Link>
-          <Link href="#" className="text-xs hover:underline underline-offset-4">
-            Privacy
-          </Link>
-        </nav>
-      </footer>
     </div>
   );
 }
